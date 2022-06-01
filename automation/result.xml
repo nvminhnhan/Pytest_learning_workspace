@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="7" skipped="2" tests="16" time="0.158"
+               timestamp="2022-05-31T14:19:16.824849" hostname="MinhNhan">
+        <testcase classname="test_compare" name="test_greater" time="0.001">
+            <skipped type="pytest.xfail" message=""/>
+        </testcase>
+        <testcase classname="test_compare" name="test_greater_equal" time="0.001"/>
+        <testcase classname="test_compare" name="test_less" time="0.000">
+            <skipped type="pytest.skip" message="unconditional skip">
+                C:\Users\MinhNhan\Documents\Silabs_IoT_Project\Pytest_learning\Pytest_learning_workspace\automation\test_compare.py:18:
+                unconditional skip
+            </skipped>
+        </testcase>
+        <testcase classname="test_div_by_13" name="test_divisible_by_13" time="0.001"/>
+        <testcase classname="test_div_by_3_6" name="test_divisible_by_3" time="0.001"/>
+        <testcase classname="test_div_by_3_6" name="test_divisible_by_6" time="0.001">
+            <failure message="assert (39 % 6) == 0">input_value = 39
+
+                def test_divisible_by_6(input_value):
+                &gt; assert input_value % 6 == 0
+                E assert (39 % 6) == 0
+
+                test_div_by_3_6.py:9: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_failure" name="test_sqrt_failure" time="0.001">
+            <failure
+                    message="assert 5.0 == 6&#10; +  where 5.0 = &lt;built-in function sqrt&gt;(25)&#10; +    where &lt;built-in function sqrt&gt; = math.sqrt">
+                def test_sqrt_failure():
+                num = 25
+                &gt; assert math.sqrt(num) == 6
+                E assert 5.0 == 6
+                E + where 5.0 = &lt;built-in function sqrt&gt;(25)
+                E + where &lt;built-in function sqrt&gt; = math.sqrt
+
+                test_failure.py:7: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_failure" name="test_square_failure" time="0.001">
+            <failure message="assert (7 * 7) == 40">def test_square_failure():
+                num = 7
+                &gt; assert 7 * 7 == 40
+                E assert (7 * 7) == 40
+
+                test_failure.py:12: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_failure" name="test_equality_failure" time="0.001">
+            <failure message="assert 10 == 11">def test_equality_failure():
+                &gt; assert 10 == 11
+                E assert 10 == 11
+
+                test_failure.py:16: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_multiplication" name="test_multiplication_11[1-11]" time="0.001"/>
+        <testcase classname="test_multiplication" name="test_multiplication_11[2-22]" time="0.001"/>
+        <testcase classname="test_multiplication" name="test_multiplication_11[3-35]" time="0.001">
+            <failure message="assert (11 * 3) == 35">num = 3, output = 35
+
+                @pytest.mark.parametrize("num, output", [(1, 11), (2, 22), (3, 35), (4, 44)])
+                def test_multiplication_11(num, output):
+                &gt; assert 11 * num == output
+                E assert (11 * 3) == 35
+
+                test_multiplication.py:6: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_multiplication" name="test_multiplication_11[4-44]" time="0.001"/>
+        <testcase classname="test_square" name="test_sqrt" time="0.001"/>
+        <testcase classname="test_square" name="testsquare" time="0.001">
+            <failure message="assert (7 * 7) == 40">@pytest.mark.square
+                def testsquare():
+                num = 7
+                &gt; assert 7 * 7 == 40
+                E assert (7 * 7) == 40
+
+                test_square.py:14: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="test_square" name="test_equality" time="0.001">
+            <failure message="assert 10 == 11">@pytest.mark.others
+                def test_equality():
+                &gt; assert 10 == 11
+                E assert 10 == 11
+
+                test_square.py:19: AssertionError
+            </failure>
+        </testcase>
+    </testsuite>
+</testsuites>
